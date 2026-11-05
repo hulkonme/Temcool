@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Temcool — Free Temporary Email Address</title>
+  <meta name="description" content="Temcool gives you a free disposable email address in one click. Receive verification links and sign-up mail without touching your real inbox.">
+  <meta name="theme-color" content="#060a12">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+
+  <!-- icon sprite -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="3"/><path d="m3.5 7.2 7.6 5.2a1.6 1.6 0 0 0 1.8 0l7.6-5.2"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2.5"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.2"/><rect x="14" y="3" width="7" height="7" rx="1.2"/><rect x="3" y="14" width="7" height="7" rx="1.2"/><path d="M14 14h3v3h-3zM20.5 14v1.5M20.5 19.5v.1M17 21h.1M21 21h.1"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 1 1-2.49-6.01"/><path d="M21 3v6h-6"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M9 6V4h6v2"/><path d="m6.5 6 .9 14h9.2l.9-14"/><path d="M10 10.2v6M14 10.2v6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 1.8"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 2.8v5.4c0 4.5-3 7.7-7 9.8-4-2.1-7-5.3-7-9.8V5.8z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 13.2A8 8 0 1 1 10.8 4a6.6 6.6 0 0 0 9.2 9.2z"/></symbol>
+    <symbol id="i-paperclip" viewBox="0 0 24 24"><path d="M20 11.5 11.7 19.8a5 5 0 0 1-7-7L13 4.5a3.3 3.3 0 0 1 4.7 4.7L9.4 17.5a1.7 1.7 0 0 1-2.4-2.4l7.6-7.6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 20h16"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2.8 20h18.4z"/><path d="M12 9v5M12 17.2v.1"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+    <symbol id="i-inbox" viewBox="0 0 24 24"><path d="M4 13h4l1.5 2.5h5L16 13h4"/><path d="M5 5h14l2 8v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5z"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/">
+        <span class="brand-mark"><svg class="icon"><use href="#i-mail"/></svg></span>
+        <span class="brand-name">Temcool</span>
+        <span class="brand-tag">temp mail</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+        <button class="icon-btn theme-btn" id="themeBtn" type="button" aria-label="Switch theme" title="Switch theme">
+          <svg class="icon icon-sun"><use href="#i-sun"/></svg>
+          <svg class="icon icon-moon"><use href="#i-moon"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-badge"><span class="live-dot"></span> Free · instant · no sign-up</div>
+      <h1>Burner email.<br><span class="gradient-text">Real inbox.</span></h1>
+      <p class="hero-sub">
+        Temcool hands you a disposable address in one click. Collect your verification link,
+        dodge the spam, and walk away. No account, no tracing, no catch.
+      </p>
+    </section>
+
+    <section class="app" aria-label="Temporary email">
+      <aside class="address-card">
+        <div class="card-label"><span class="live-dot"></span> Your temporary address</div>
+
+        <div class="address-row">
+          <code class="address" id="addressText" title="Your address">loading…</code>
+          <button class="icon-btn" id="copyBtn" type="button" title="Copy address" aria-label="Copy address">
+            <svg class="icon"><use href="#i-copy"/></svg>
+          </button>
+          <button class="icon-btn" id="qrBtn" type="button" title="Show QR code" aria-label="Show QR code">
+            <svg class="icon"><use href="#i-qr"/></svg>
+          </button>
+        </div>
+
+        <div class="address-meta">
+          <span class="meta-pill" id="timerPill"><svg class="icon"><use href="#i-clock"/></svg><span id="timerText">--:--</span></span>
+          <button class="text-btn" id="extendBtn" type="button">Extend</button>
+          <span class="meta-spacer"></span>
+          <span class="meta-pill muted" id="createdPill">just now</span>
+        </div>
+
+        <div class="address-actions">
+          <button class="btn btn-primary" id="newBtn" type="button">
+            <svg class="icon"><use href="#i-refresh"/></svg> New address
+          </button>
+          <button class="btn btn-ghost" id="deleteBtn" type="button">
+            <svg class="icon"><use href="#i-trash"/></svg> Delete
+          </button>
+        </div>
+
+        <div class="divider"></div>
+
+        <form class="custom-form" id="customForm" autocomplete="off" novalidate>
+          <label for="customName">Make it yours</label>
+          <div class="custom-row">
+            <div class="input-wrap">
+              <input id="customName" name="customName" type="text" placeholder="your-name" maxlength="32" spellcheck="false" aria-label="Custom address name">
+              <span class="at">@</span>
+              <select id="domainSelect" aria-label="Email domain"></select>
+            </div>
+            <button class="btn btn-soft" type="submit">Create</button>
+          </div>
+          <p class="form-hint" id="formHint">Letters, numbers, dots, dashes. 1–32 characters.</p>
+        </form>
+
+        <div class="address-foot">
+          <svg class="icon"><use href="#i-shield"/></svg>
+          <span>Inbox only. Don't use it for banking or anything you need to keep.</span>
+        </div>
+      </aside>
+
+      <section class="inbox-card" aria-label="Inbox">
+        <header class="inbox-head">
+          <div class="inbox-title">
+            <h2>Inbox</h2>
+            <span class="count" id="unreadCount" hidden>0</span>
+          </div>
+          <div class="inbox-tools">
+            <span class="live-state" id="liveState"><span class="live-dot"></span> <span id="liveText">Watching</span></span>
+            <button class="icon-btn" id="refreshBtn" type="button" title="Refresh inbox" aria-label="Refresh inbox">
+              <svg class="icon"><use href="#i-refresh"/></svg>
+            </button>
+          </div>
+        </header>
+
+        <div class="inbox-body">
+          <div class="loading" id="loading" aria-hidden="true">
+            <div class="skeleton"><span class="sk-avatar"></span><span class="sk-lines"><i></i><i></i></span><span class="sk-time"></span></div>
+            <div class="skeleton"><span class="sk-avatar"></span><span class="sk-lines"><i></i><i></i></span><span class="sk-time"></span></div>
+            <div class="skeleton"><span class="sk-avatar"></span><span class="sk-lines"><i></i><i></i></span><span class="sk-time"></span></div>
+          </div>
+
+          <ul class="msg-list" id="msgList" aria-live="polite"></ul>
+
+          <div class="empty" id="empty" hidden>
+            <div class="empty-art" aria-hidden="true">
+              <svg viewBox="0 0 220 170" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="emptyGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="var(--accent)"/>
+                    <stop offset="1" stop-color="var(--accent-2)"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="110" cy="86" r="70" fill="none" stroke="var(--border-strong)" stroke-dasharray="3 9"/>
+                <circle cx="110" cy="86" r="52" fill="url(#emptyGrad)" opacity="0.1"/>
+                <rect x="58" y="58" width="104" height="70" rx="12" fill="var(--panel-solid)" stroke="var(--border-strong)"/>
+                <path d="M64 66l40 28a10 10 0 0 0 12 0l40-28" fill="none" stroke="url(#emptyGrad)" stroke-width="2.4" stroke-linecap="round"/>
+                <circle cx="172" cy="48" r="4" fill="var(--accent)"/>
+                <circle cx="48" cy="116" r="3" fill="var(--accent-2)"/>
+                <circle cx="160" cy="136" r="2.5" fill="var(--accent)"/>
+              </svg>
+            </div>
+            <h3>Waiting for your first email</h3>
+            <p>Send anything to <button class="inline-address" id="emptyAddress" type="button">your address</button> and it shows up here automatically.</p>
+            <p class="empty-note"><span class="live-dot"></span> Checking every 8 seconds</p>
+          </div>
+
+          <div class="error-state" id="errorState" hidden>
+            <div class="error-icon"><svg class="icon"><use href="#i-alert"/></svg></div>
+            <h3 id="errorTitle">Couldn't load your inbox</h3>
+            <p id="errorText">Something went wrong.</p>
+            <button class="btn btn-primary" id="retryBtn" type="button">Try again</button>
+          </div>
+        </div>
+
+        <footer class="inbox-foot">
+          <span id="inboxFootText">Messages arrive here in real time.</span>
+          <span class="kbd-hint"><kbd>C</kbd> copy <kbd>N</kbd> new <kbd>R</kbd> refresh</span>
+        </footer>
+      </section>
+    </section>
+
+    <section class="steps" id="how">
+      <div class="section-head">
+        <p class="eyebrow">How it works</p>
+        <h2>Three steps. That's the whole thing.</h2>
+      </div>
+      <div class="step-grid">
+        <article class="step">
+          <span class="step-num">01</span>
+          <h3>Grab an address</h3>
+          <p>One is generated the moment the page loads. Want a specific name? Type it and hit create.</p>
+        </article>
+        <article class="step">
+          <span class="step-num">02</span>
+          <h3>Use it anywhere</h3>
+          <p>Paste it into a sign-up form, newsletter, trial or download gate. No confirmation needed.</p>
+        </article>
+        <article class="step">
+          <span class="step-num">03</span>
+          <h3>Read, then vanish</h3>
+          <p>Mail shows up here within seconds. Delete the inbox and it's gone — your real email stays clean.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Good questions, straight answers.</h2>
+      </div>
+      <details class="faq-item" open>
+        <summary>Is Temcool actually receiving real email?</summary>
+        <p>Yes. Every address is a live mailbox on the mail.tm network. Mail sent from any provider — Gmail, Outlook, a sign-up form — is delivered to the inbox on this page.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I choose my own address?</summary>
+        <p>Absolutely. Type a name in the “Make it yours” field and pick one of the available domains. If it's taken, try another.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How long does an inbox last?</summary>
+        <p>The timer resets to 60 minutes every time you press Extend. Your session stays linked to this browser for six hours. Generate a fresh address whenever you want to start over.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I send email from it?</summary>
+        <p>No — Temcool is receive-only by design. It's built for verification links, sign-up confirmations and one-off messages.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is it private?</summary>
+        <p>Anyone who knows the address can email it, and the inbox is tied to this browser session. Treat it like a public mailbox: never use it for banking, government or anything sensitive.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark small"><svg class="icon"><use href="#i-mail"/></svg></span>
+        <span>Temcool</span>
+      </div>
+      <p>Free disposable email. Real inbox, zero commitment.</p>
+      <p class="footer-note">Built on the open <a href="https://mail.tm" target="_blank" rel="noopener noreferrer">mail.tm</a> API. Use responsibly.</p>
+      <p class="footer-note footer-stats" id="footerStats" hidden></p>
+    </div>
+  </footer>
+
+  <!-- reader -->
+  <div class="reader" id="reader" hidden>
+    <div class="reader-backdrop" data-close></div>
+    <div class="reader-panel" role="dialog" aria-modal="true" aria-labelledby="readerSubject">
+      <header class="reader-head">
+        <div class="reader-top">
+          <span class="avatar" id="readerAvatar">?</span>
+          <div class="reader-id">
+            <h2 id="readerSubject">Message</h2>
+            <p id="readerFrom"></p>
+            <p class="reader-time" id="readerTime"></p>
+          </div>
+          <button class="icon-btn reader-close" type="button" data-close aria-label="Close message">
+            <svg class="icon"><use href="#i-close"/></svg>
+          </button>
+        </div>
+        <div class="reader-toolbar">
+          <div class="segmented" role="group" aria-label="Message view">
+            <button type="button" class="seg-btn active" data-view="html">HTML</button>
+            <button type="button" class="seg-btn" data-view="text">Text</button>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="imagesToggle">
+            <span class="switch-track"><span class="switch-thumb"></span></span>
+            <span>Remote images</span>
+          </label>
+          <span class="toolbar-spacer"></span>
+          <button class="btn btn-ghost btn-sm" id="deleteMsg" type="button">
+            <svg class="icon"><use href="#i-trash"/></svg> Delete
+          </button>
+        </div>
+      </header>
+      <div class="reader-body" id="readerBody"></div>
+      <div class="reader-attachments" id="readerAttach" hidden></div>
+    </div>
+  </div>
+
+  <!-- qr modal -->
+  <div class="modal" id="qrModal" hidden>
+    <div class="modal-backdrop" data-qr-close></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="qrTitle">
+      <button class="icon-btn modal-close" type="button" data-qr-close aria-label="Close QR code">
+        <svg class="icon"><use href="#i-close"/></svg>
+      </button>
+      <h2 id="qrTitle">Scan to email this address</h2>
+      <div class="qr-frame">
+        <img id="qrImg" alt="QR code for your temporary email address" width="220" height="220">
+        <div class="qr-fallback" id="qrFallback" hidden>QR preview unavailable — copy the address instead.</div>
+      </div>
+      <code class="qr-address" id="qrAddress"></code>
+      <button class="btn btn-primary" id="qrCopyBtn" type="button">
+        <svg class="icon"><use href="#i-copy"/></svg> Copy address
+      </button>
+    </div>
+  </div>
+
+  <div class="toasts" id="toastRoot" aria-live="polite"></div>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
